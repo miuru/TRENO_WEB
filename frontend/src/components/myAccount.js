@@ -4,6 +4,9 @@ import UserIcon from '@material-ui/icons/PermIdentityTwoTone';
 import PhoneIcon from "@material-ui/icons/PermPhoneMsgTwoTone";
 import LockOutlinedIcon from '@material-ui/icons/MailOutline';
 import Button from '@material-ui/core/Button';
+import NICIcon from "@material-ui/icons/CardMembershipTwoTone"
+import LocationIcon from "@material-ui/icons/AddLocationTwoTone"
+import PostalIcon from "@material-ui/icons/Code"
 import Label from '@material-ui/core/FormLabel';
 import Input from "./signIn";
 import Icon from '@material-ui/core/Icon';
@@ -18,11 +21,19 @@ export default class Home extends Component {
         let userName = sessionStorage.getItem('name');
         let mobile = sessionStorage.getItem('mobileNo');
         let email = sessionStorage.getItem('email');
+        let nic = sessionStorage.getItem('nic');
+        let district= sessionStorage.getItem('district');
+        let province = sessionStorage.getItem('province');
+        let postalCode = sessionStorage.getItem('postalCode');
         this.state = {
             UserId: userid,
             UserName: userName,
             Phone : mobile,
-            Email : email
+            Email : email,
+            NIC : nic,
+            Province : province,
+            District : district,
+            PostalCode : postalCode
         }
     }
 
@@ -55,16 +66,16 @@ export default class Home extends Component {
                         height: '100vmin',
                         position: 'relative'}}>
                         <div>
-                            <img style={{  width: '50vmin',
-                                height: '50vmin',
+                            <img style={{  width: '40vmin',
+                                height: '40vmin',
                                 zIndex: 1,
                                 position: 'relative',
                                 marginLeft: '0vmin',
                                 marginRight: 'auto',
                                 borderRadius: '100%',
-                                marginTop: "1vmin"}} src={image}/>
+                                marginTop: "0.5vmin"}} src={image}/>
                         </div>
-                        <div style={{display:'flex',marginTop:8}}>
+                        <div style={{marginTop:8}}>
                             <QRCode
 
                                 id={this.state.UserId}
@@ -74,32 +85,52 @@ export default class Home extends Component {
                                 includeMargin={true}
                             />
                             <Button
-                                    color="primary"  style={{paddingLeft:50,width:50}} onClick={downloadQR}> Download QR</Button>
+                                  style={{paddingLeft:20,width:220,backgroundColor:'#004dcf',color:'white' }} onClick={downloadQR}> Download QR</Button>
                         </div>
                     </div>
                 </div>
-                <div style={{width:'54%',border:'1px solid black',borderRadius:8,marginLeft:'1%',opacity:0.9,float:'left',marginTop:20}}>
+                <div style={{width:'54%',border:'1px solid black',borderRadius:8,marginLeft:'1%',opacity:0.9,float:'left',marginTop:20,background:'#1e1c22'}}>
                     <div style={{  paddingTop: '4vmin',
                         marginLeft: 'auto',
                         marginRight: 'auto',
                         width: '50vmin',
                         height: '100vmin',
                         position: 'relative'}}>
-
                         <div>
-                            <label style={{fontSize:26,display:'flex',fontFamily: 'Noto Serif',fontWeight:'bold'}}>  <Avatar style={{color:'primary'}} >
+                            <h  style= {{fontSize: 32, fontFamily: 'Sans-serif', fontStyle: 'normal',
+                            fontWeight: 'bold', paddingLeft: '2vmin', color: '#5300eb' }}>
+                                Account Details
+                            </h>
+                        </div>
+                        <div style={{marginTop:'15%'}}>
+                            <label style={{fontSize:26,display:'flex',fontFamily: 'Noto Serif',color:'white'}}>  <Avatar style={{color:'primary'}} >
                                 <UserIcon/>
                             </Avatar>{this.state.UserName} </label>
                         </div>
                         <div>
-                            <label style={{fontSize:24,display:'flex',fontFamily: 'Noto Serif',fontWeight:'bold'}}>  <Avatar style={{color:'primary'}} >
+                            <label style={{fontSize:24,display:'flex',fontFamily: 'Noto Serif',fontWeight:'bold',color:'white'}}>  <Avatar style={{color:'primary'}} >
                                 <PhoneIcon />
                             </Avatar>{this.state.Phone} </label>
                         </div>
                         <div>
-                            <label style={{fontSize:24,display:'flex',fontFamily: 'Noto Serif',fontWeight:'bold'}}>  <Avatar style={{color:'primary'}} >
-                                <LockOutlinedIcon />
-                            </Avatar>{this.state.Email} </label>
+                            <label style={{fontSize:24,display:'flex',fontFamily: 'Noto Serif',fontWeight:'bold',color:'white'}}>  <Avatar style={{color:'primary'}} >
+                                <NICIcon />
+                            </Avatar>{this.state.NIC} </label>
+                        </div>
+                        <div>
+                            <label style={{fontSize:24,display:'flex',fontFamily: 'Noto Serif',fontWeight:'bold',color:'white'}}>  <Avatar style={{color:'primary'}} >
+                                <LocationIcon />
+                            </Avatar>{this.state.District} </label>
+                        </div>
+                        <div>
+                            <label style={{fontSize:24,display:'flex',fontFamily: 'Noto Serif',fontWeight:'bold',color:'white'}}>  <Avatar style={{color:'primary'}} >
+                                <LocationIcon />
+                            </Avatar>{this.state.Province} </label>
+                        </div>
+                        <div>
+                            <label style={{fontSize:24,display:'flex',fontFamily: 'Noto Serif',fontWeight:'bold',color:'white'}}>  <Avatar style={{color:'primary'}} >
+                                <PostalIcon />
+                            </Avatar>{this.state.PostalCode} </label>
                         </div>
 
                     </div>

@@ -71,7 +71,8 @@ export default class Example extends React.Component {
 								</Nav>
 							</Collapse>
 						</Navbar>
-						<Route exact path={"/"} component={Home}/>
+						<Route exact path={"/"} component={SignUp}/>
+                        <Route path={"/home"} component={Home}/>
 						<Route path={"/myAccount"} component={MyAccount}/>
 						<Route path={"/avroutes"} component={AvailableRoutes}/>
 						<Route path={"/faq"} component={FAQ}/>
@@ -112,7 +113,8 @@ export default class Example extends React.Component {
                         </Nav>
                     </Collapse>
                 </Navbar>
-                <Route exact path={"/"} component={Home}/>
+                <Route exact path={"/"} component={SignUp}/>
+                <Route path={"/home"} component={Home}/>
                 <Route path={"/avroutes"} component={AvailableRoutes}/>
                 <Route path={"/faq"} component={FAQ}/>
                 <Route path={"/about"} component={About}/>

@@ -45,18 +45,18 @@ export default class StationManagementDelete extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                        {
-                            this.state.stations.map((station,i)=>{
-                                        return(<tr key={i}>
-                                            <td>{station.BusStationCode}</td>
-                                            <td>{station.Coordinates.lat}</td>
-                                            <td>{station.Coordinates.lng}</td>
-                                            <td>{station.Name}</td>
-                                            <td>{station.City}</td>
-                                            <td><button onClick={()=>{this.deleteBusStation(station._id)}} className="btn btn-danger">Delete</button></td>
-                                        </tr>)
-                                    })
-                        }
+                        {/*{*/}
+                            {/*this.state.stations.map((station,i)=>{*/}
+                                        {/*return(<tr key={i}>*/}
+                                            {/*<td>{station.BusStationCode}</td>*/}
+                                            {/*<td>{station.Coordinates.lat}</td>*/}
+                                            {/*<td>{station.Coordinates.lng}</td>*/}
+                                            {/*<td>{station.Name}</td>*/}
+                                            {/*<td>{station.City}</td>*/}
+                                            {/*<td><button onClick={()=>{this.deleteBusStation(station._id)}} className="btn btn-danger">Delete</button></td>*/}
+                                        {/*</tr>)*/}
+                                    {/*})*/}
+                        {/*}*/}
                         </tbody>
                     </table>
                 </div>

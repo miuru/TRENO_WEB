@@ -146,16 +146,16 @@ class AvailableRoutes extends Component {
                                 </tr>
                             </thead>
                             <tbody >
-                                {
-                                    this.state.routes.map((item, key) => {
-                                        return <tr key={key}>
-                                            <td>{item.BusId}</td>
-                                            <td>{item.DepartureStation + "-" + item.ArrivalStation}</td>
-                                            <td><button className="btn btn-dark" onClick={() => { this.toggle(item) }}>View more</button></td>
-                                            <td><button className="btn btn-dark" onClick={() => {this.renderBusStops(item)}}>View on Map</button></td>
-                                        </tr>
-                                    })
-                                }
+                                {/*{*/}
+                                    {/*this.state.routes.map((item, key) => {*/}
+                                        {/*return <tr key={key}>*/}
+                                            {/*<td>{item.BusId}</td>*/}
+                                            {/*<td>{item.DepartureStation + "-" + item.ArrivalStation}</td>*/}
+                                            {/*<td><button className="btn btn-dark" onClick={() => { this.toggle(item) }}>View more</button></td>*/}
+                                            {/*<td><button className="btn btn-dark" onClick={() => {this.renderBusStops(item)}}>View on Map</button></td>*/}
+                                        {/*</tr>*/}
+                                    {/*})*/}
+                                {/*}*/}
                             </tbody>
                         </table>
                     </div>

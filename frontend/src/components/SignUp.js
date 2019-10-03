@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
     },
     header: {
         fontSize: 32, fontFamily: 'Sans-serif', fontStyle: 'normal',
-        fontWeight: 'bold', paddingLeft: '2vmin', color: 'blue'
+        fontWeight: 'bold', paddingLeft: '2vmin', color: 'white'
     }
 }));
 
@@ -219,7 +219,7 @@ function SignUp() {
     let $imagePreview = (
         <div className={classes.inputContainer}>
             <div className={classes.header}>
-                <h className={classes.header}>
+                <h className={classes.header} >
                     Registration Form
                 </h>
 
@@ -244,7 +244,7 @@ function SignUp() {
             </div>
 
             <FormControlLabel
-
+                style={{color:'white'}}
                 control={<Checkbox onChange={agreementHandler} value="accept" color="primary"/>}
                 label="By clicking you accept our terms and conditions."
             />
@@ -259,6 +259,9 @@ function SignUp() {
             >
                 Register
             </Button>
+            <Link href="login" variant="body2"     style={{color:'white'}}>
+                {"Don't have an account? Sign Up"}
+            </Link>
         </div>
     );
 
@@ -319,18 +322,19 @@ function SignUp() {
     return (
         <Grid container component="main" className={classes.root} component={Paper} elevation={6} square>
             <CssBaseline/>
-            <Grid item xs={false} sm={4} md={5}>
+            <Grid item xs={false} sm={4} md={5} style={{background:'#525252'}}>
                 <div>
-                    <div>  {$imagePreview}</div>
+                    <div> {$imagePreview}</div>
                 </div>
             </Grid>
-            <Grid item xs={12} sm={8} md={7}>
+            <Grid item xs={12} sm={8} md={7} style={{background:'#1e1c22'}}>
                 <div className={classes.paper}>
                     <form className={classes.form}>
                         <Input
                             autoFocus={true}
                             id="input-with-icon-adornment"
                             fullWidth
+                            style={{color:'white'}}
                             placeholder="Email"
                             name='email'
                             onChange={emailChangeHandler}
@@ -341,7 +345,7 @@ function SignUp() {
                             }
                         />
 
-                        {validEmail.toString() &&(<label style={{color: 'red', paddingLeft: 5}}> {validEmail.toString()} </label>)}
+                        {validEmail.toString() &&(<label style={{color: 'red', paddingLeft: 5,alignItems:'left'}}> {validEmail.toString()} </label>)}
 
 
                         <Input
@@ -349,6 +353,7 @@ function SignUp() {
                             type='password'
                             id="input-with-icon-adornment"
                             fullWidth
+                            style={{color:'white'}}
                             placeholder="Password"
                             onChange={passwordChangeHandler}
                             startAdornment={
@@ -364,6 +369,7 @@ function SignUp() {
                             type='password'
                             id="input-with-icon-adornment"
                             fullWidth
+                            style={{color:'white'}}
                             placeholder="Confirm Password"
                             onChange={passwordConfirmChangeHandler}
                             startAdornment={
@@ -377,6 +383,7 @@ function SignUp() {
                             name='name'
                             id="input-with-icon-adornment"
                             fullWidth
+                            style={{color:'white'}}
                             placeholder="Name"
                             onChange={nameChangeHandler}
                             startAdornment={
@@ -391,6 +398,7 @@ function SignUp() {
                             type='number'
                             id="input-with-icon-adornment"
                             fullWidth
+                            style={{color:'white'}}
                             placeholder="Mobile No"
                             onChange={mobielNoChangeHandler}
                             startAdornment={
@@ -404,6 +412,7 @@ function SignUp() {
                             name='password'
                             id="input-with-icon-adornment"
                             fullWidth
+                            style={{color:'white'}}
                             placeholder="District"
                             onChange={districtChangeHandler}
                             startAdornment={
@@ -417,6 +426,7 @@ function SignUp() {
                             name='password'
                             id="input-with-icon-adornment"
                             fullWidth
+                            style={{color:'white'}}
                             placeholder="Province"
                             onChange={provinceChangeHandler}
                             startAdornment={
@@ -429,6 +439,7 @@ function SignUp() {
                             name='password'
                             id="input-with-icon-adornment"
                             fullWidth
+                            style={{color:'white'}}
                             placeholder="NIC number"
                             onChange={nicChangeHandler}
                             startAdornment={
@@ -440,6 +451,7 @@ function SignUp() {
                         <Input
                             name='password'
                             id="input-with-icon-adornment"
+                            style={{color:'white'}}
                             fullWidth
                             placeholder="Postal Code"
                             onChange={postalCodeChangeHandler}
@@ -456,10 +468,11 @@ function SignUp() {
                                     value="Passenger"
                                     control={<Radio color="primary" />}
                                     label="Passenger"
+                                    style={{color:'white'}}
                                     labelPlacement="start"
                                 />
                                 <FormControlLabel
-
+                                    style={{color:'white'}}
                                     value="Driver"
                                     control={<Radio color="primary" />}
                                     label="Driver"
@@ -470,13 +483,9 @@ function SignUp() {
                         </div>
                     </form>
                 </div>
-                <Grid item>
-                    <Link href="SignIn" variant="body2">
-                        {"Don't have an account? Sign Up"}
-                    </Link>
-                </Grid>
             </Grid>
         </Grid>
+
     );
 
 }

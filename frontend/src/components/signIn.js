@@ -16,7 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Input from '@material-ui/core/Input';
-import DefaultImg from "../assets/signUp.png";
+import DefaultImg from "../assets/user-img.png";
 import axios from 'axios';
 import {withRouter} from 'react-router';
 import {createBrowserHistory} from "history";
@@ -25,10 +25,10 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="textSecondary" align="center">
+        <Typography variant="body2" color="textSecondary" align="center"   style={{color:'white'}}>
             {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+            <Link color="inherit" href="">
+                TRENO
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -60,11 +60,11 @@ const useStyles = makeStyles(theme => ({
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.error.main,
+        backgroundColor: theme.palette.primary.main,
     },
     form: {
         width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
+        marginTop: theme.spacing(7),
     },
     submit: {
         margin: theme.spacing(3, 0, 2),
@@ -123,11 +123,14 @@ function SignIn() {
                 sessionStorage.setItem('password', resData[0].password);
                 // sessionStorage.setItem('UserType', resData[0].Type);
                 sessionStorage.setItem('postalCode', resData[0].postalCode);
+                sessionStorage.setItem('district',resData[0].district);
+                sessionStorage.setItem('province',resData[0].province);
+
 
                 // let {history} = this.props;
                 if(resData[0].type === "Driver") {
                     history.push({
-                        pathname: '/'
+                        pathname: '/home'
                     });
                     window.location.reload();
                 }
@@ -160,28 +163,30 @@ function SignIn() {
 
         reader.readAsDataURL(file)
     };
-    let $imagePreview =
-        (<button type="file" onClick={_handleImageChange}
-                 style={{height: '50%', width: '60%', border: 'none', background: 'white'}}><img
-            style={{height: '40%', width: '160'}} src={DefaultImg}/></button>);
-    if (imagePreviewUrl) {
-        $imagePreview =
-            (<img style={{height: '40%', width: '60%'}} src={imagePreviewUrl} type="file"
-                  onChange={_handleImageChange}/>);
-    }
+
     const classes = useStyles();
 
     return (
         <Grid container component="main" className={classes.root}>
             <CssBaseline/>
-            <Grid item xs={false} sm={4} md={7}>
-                <div style={{paddingLeft: '160px', paddingTop: '80px'}}>
-                    <div> {$imagePreview}</div>
+            <Grid item xs={false} sm={4} md={6} style={{background:'#525252'}}>
+                <div style={{ paddingTop: '60px',}}>
+                    <img style={{height: '50%', width: '50%',borderRadius:"50%"}} src={DefaultImg}
+                    />
                 </div>
+                <Button
+
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    className={classes.submit}
+                >
+                    SignIn With faceBook
+                </Button>
             </Grid>
-            <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+            <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square style={{background:'#1e1c22'}} >
                 <div className={classes.paper}>
-                    <Typography component="h1" variant="h5">
+                    <Typography component="h3" variant="h3" style={{color:'#004dcf',fontFamily:'Stencil'}}>
                         LOGIN
                     </Typography>
                     <form className={classes.form} noValidate>
@@ -190,7 +195,7 @@ function SignIn() {
                             fullWidth
                             type="email"
                             placeholder="Email"
-                            error={!validEmail}
+                            style={{color:'white'}}
                             onChange={emailChangeHandler}
                             startAdornment={
                                 <Avatar className={classes.avatar}>
@@ -202,6 +207,7 @@ function SignIn() {
                             id="input-with-icon-adornment"
                             fullWidth
                             type='password'
+                            style={{color:'white'}}
                             placeholder="Password"
                             onChange={passwordChangeHandler}
                             startAdornment={
@@ -211,6 +217,7 @@ function SignIn() {
                             }
                         />
                         <FormControlLabel
+                            style={{color:'white'}}
                             control={<Checkbox value="remember" color="primary"/>}
                             label="Remember me"
                         />
@@ -226,13 +233,15 @@ function SignIn() {
                         </Button>
                         <Grid container>
                             <Grid item xs>
-                                <Link href="#" variant="body2">
+                                <Link href="#" variant="body2"   style={{color:'white'}}>
                                     Forgot password?
+
                                 </Link>
                             </Grid>
                             <Grid item>
-                                <Link href="#" variant="body2">
+                                <Link href="/" variant="body2"   style={{color:'white'}}>
                                     {"Don't have an account? Sign Up"}
+
                                 </Link>
                             </Grid>
                         </Grid>
