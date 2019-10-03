@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3246a70-60c5-44e4-b019-cd86b0540682" name="Default Changelist" comment="Edited">
+    <list default="true" id="e3246a70-60c5-44e4-b019-cd86b0540682" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/blueicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/blueiconlarge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/default-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/signUp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/trenoback.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AvailableRoutes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AvailableRoutes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Station/Station.Management.Delete.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Station/Station.Management.Delete.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/main/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/main/NavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/myAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/myAccount.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/signIn.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/myAccount.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="133" column="30" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+            <state relative-caret-position="183">
+              <caret line="94" column="44" lean-forward="true" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -52,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/signIn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3060">
-              <caret line="186" column="111" selection-start-line="186" selection-start-column="104" selection-end-line="186" selection-end-column="111" />
+            <state relative-caret-position="323">
+              <caret line="202" column="41" selection-start-line="202" selection-start-column="41" selection-end-line="202" selection-end-column="41" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -151,8 +141,8 @@
         <option value="$PROJECT_DIR$/frontend/src/components/AvailableRoutes.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/components/main/NavBar.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/components/SignUp.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/signIn.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/myAccount.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/signIn.js" />
       </list>
     </option>
   </component>
@@ -268,7 +258,7 @@
       <workItem from="1570000369570" duration="18420000" />
       <workItem from="1570028955575" duration="9531000" />
       <workItem from="1570068614434" duration="3824000" />
-      <workItem from="1570076596476" duration="11242000" />
+      <workItem from="1570076596476" duration="12686000" />
     </task>
     <task id="LOCAL-00001" summary="FIrst Commit">
       <created>1570030767694</created>
@@ -298,11 +288,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570070410817</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Edited">
+      <created>1570110385545</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570110385545</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43017000" />
+    <option name="totallyTimeSpent" value="44461000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -317,7 +314,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19568452" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19568452" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -331,7 +328,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="SVN Repositories" order="9" weight="0.32993197" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26530612" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26530612" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -631,8 +628,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/signIn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="186" column="111" selection-start-line="186" selection-start-column="104" selection-end-line="186" selection-end-column="111" />
+        <state relative-caret-position="323">
+          <caret line="202" column="41" selection-start-line="202" selection-start-column="41" selection-end-line="202" selection-end-column="41" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -648,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/myAccount.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="133" column="30" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+        <state relative-caret-position="183">
+          <caret line="94" column="44" lean-forward="true" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

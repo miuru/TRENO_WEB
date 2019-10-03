@@ -169,7 +169,7 @@ function SignIn() {
     return (
         <Grid container component="main" className={classes.root}>
             <CssBaseline/>
-            <Grid item xs={false} sm={4} md={6} style={{background:'#525252'}}>
+            <Grid item xs={false} sm={4} md={6} style={{background:'#1e1c22'}}>
                 <div style={{ paddingTop: '60px',}}>
                     <img style={{height: '50%', width: '50%',borderRadius:"50%"}} src={DefaultImg}
                     />
